@@ -32,5 +32,7 @@ public class Main
 		al2.add(0);al2.add(1);al2.add(1);
 		if(al.equals(al2))
 		System.out.println(al);
+		else
+		System.out.println("Wrong");
 	}
 }
