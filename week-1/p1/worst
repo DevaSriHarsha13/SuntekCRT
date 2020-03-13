@@ -1,4 +1,4 @@
-[10:17, 3/11/2020] Venuu: class Main
+class Main
 {
     //Solution
     int[] ExorOfArrays(int []array,int [][]queiry)
