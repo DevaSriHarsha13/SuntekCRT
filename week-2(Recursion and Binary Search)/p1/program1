@@ -1,0 +1,42 @@
+import java.io.*; 
+  
+class Main 
+{ 
+    
+    void validParanthesis(int index, int n, int cc, int oc,char paranthesis[]) 
+    { 
+       
+        
+        if(cc == n)  //combination break condition
+        { 
+            // printing  the possible combinations 
+            for(int i=0;i<2*n;i++) 
+                System.out.print(paranthesis[i]); 
+            System.out.println(); 
+            return; 
+        } 
+        else
+        { 
+            if(oc < n)
+            { 
+                paranthesis[index] = '('; 
+               validParanthesis(index+1, n, cc, oc+1,paranthesis);
+                
+            } 
+            if(oc > cc) 
+            { 
+                paranthesis[index] = ')'; 
+                validParanthesis(index+1, n, cc+1, oc,paranthesis); 
+                
+            } 
+        } 
+    } 
+    public static void main (String[] args)  
+    { 
+        int n = 3; 
+        char[] paranthesis = new char[2 * n];
+        Main m=new Main();
+        m.validParanthesis(0, n,0,0,paranthesis);
+        
+    } 
+} 
